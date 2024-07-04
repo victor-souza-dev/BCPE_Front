@@ -5,7 +5,7 @@
   
 <br />
 
-> USED API BCPE: https://github.com/victor-souza-dev/BCPE
+> USED API: https://github.com/victor-souza-dev/BCPE
 
 <br />
 
@@ -58,4 +58,4 @@ npm run build -- --out-dir=/path/to/output
 Ensure you have the correct API base URL set in your environment variables or configuration files. You may need to adjust CORS settings in your backend to allow requests from your development server.
 
 ## 📜 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.
