@@ -2,6 +2,7 @@
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/victor-souza-dev/BCPE_Front/blob/main/README.md)
 [![br](https://img.shields.io/badge/lang-br-green.svg)](https://github.com/victor-souza-dev/BCPE_Front/blob/main/README-br.md)
+
 <br />
 
 > API USADA: https://github.com/victor-souza-dev/BCPE
