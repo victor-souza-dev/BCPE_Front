@@ -1,5 +1,4 @@
 import { useMutation } from "@tanstack/react-query";
-import { AxiosError } from "axios";
 import JSZip from "jszip";
 import { useSnackbar } from "notistack";
 
@@ -78,12 +77,6 @@ export const useExtractCssToJsonPost = () => {
           variant: "error",
         });
       }
-    },
-    onError: (error: AxiosError) => {
-      const message = (error.response?.data as string) || "Erro ao gerar JSON";
-      enqueueSnackbar(message, {
-        variant: "error",
-      });
     },
   });
 

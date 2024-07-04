@@ -1,15 +1,7 @@
 import { useRef, useState } from "react";
 
 import UploadIcon from "@mui/icons-material/Upload";
-import {
-  Box,
-  Button,
-  CircularProgress,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
-import { useSnackbar } from "notistack";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { v4 } from "uuid";
 
 import { useExtractCssToJsonPost } from "src/shared/queries/post";
@@ -35,8 +27,6 @@ const initialTree: ITreeNode[] = [
 export function ExtractCssToJson() {
   const [treeData, setTreeData] = useState<ITreeNode[]>(initialTree);
   const [fileCount, setFileCount] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const { enqueueSnackbar } = useSnackbar();
 
   const { mutate } = useExtractCssToJsonPost();
 
@@ -55,27 +45,12 @@ export function ExtractCssToJson() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (
-      !inputRef.current?.files?.length ||
-      inputRef.current.files.length === 0
-    ) {
-      enqueueSnackbar("É necessário adicionar pelo menos um arquivo css", {
-        variant: "error",
-        autoHideDuration: 3000,
-      });
-    } else if (inputRef.current?.files?.length > 1000) {
-      enqueueSnackbar("Limite de 1000 arquivos atingido!", {
-        variant: "error",
-        autoHideDuration: 3000,
-      });
-    } else {
+    if (inputRef.current?.files) {
       const threeDataReq = convertTreeToRequest(treeData);
-      setIsLoading(true);
       mutate({
         configs: threeDataReq,
         archives: inputRef.current?.files,
       });
-      setIsLoading(false);
     }
   };
 
@@ -131,20 +106,6 @@ export function ExtractCssToJson() {
                 type="submit"
                 variant="contained"
                 color="success"
-                endIcon={
-                  isLoading && (
-                    <Box
-                      pl={1}
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <CircularProgress color="inherit" size={16} />
-                    </Box>
-                  )
-                }
                 fullWidth
               >
                 Generate
