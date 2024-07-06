@@ -1,19 +1,13 @@
-interface INotFound {
-  isIsp?: boolean;
-}
+import { useTranslation } from "react-i18next";
 
-export const NotFound = ({ isIsp = false }: INotFound) => {
-  if (isIsp) {
-    return (
-      <div>
-        <h1>ISP Not Found</h1>
-      </div>
-    );
-  }
+import { tokens } from "src/locales/tokens";
+
+export const NotFound = () => {
+  const { t } = useTranslation();
 
   return (
     <div>
-      <h1>Not Found</h1>
+      <h1>{t(tokens.exceptions.notFound)}</h1>
     </div>
   );
 };

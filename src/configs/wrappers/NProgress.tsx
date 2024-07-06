@@ -2,7 +2,7 @@ import { css, Global } from "@emotion/react";
 import { useTheme } from "@mui/material";
 import nProgress from "nprogress";
 
-import { baseApi } from "src/shared/services/baseApi";
+import { baseApi } from "src/configs/services/baseApi";
 
 const nProgressStyles = (
   color: string = "#36C0EE",

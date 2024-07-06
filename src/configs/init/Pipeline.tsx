@@ -4,7 +4,7 @@ import React from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 
 import { init } from ".";
-import { queryClient } from "../queryClient";
+import { queryClient } from "../services/queryClient";
 
 interface IProps {
   children: React.ReactNode;

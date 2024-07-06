@@ -2,7 +2,7 @@ import { Backdrop, Box, CircularProgress } from "@mui/material";
 import { AxiosError } from "axios";
 import { useSnackbar } from "notistack";
 
-import { baseApi } from "src/shared/services/baseApi";
+import { baseApi } from "src/configs/services/baseApi";
 
 interface IProps {
   children: React.ReactNode;

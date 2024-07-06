@@ -1,14 +1,20 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import UploadIcon from "@mui/icons-material/Upload";
-import { Button, Grid, Paper, Typography } from "@mui/material";
-import { v4 } from "uuid";
+import { Button, Grid, Paper } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
+import i18n from "src/locales/i18n";
+import { tokens } from "src/locales/tokens";
+import { ThreeList } from "src/shared/components/ThreeList";
+import { updateLabels } from "src/shared/components/ThreeList/mutationsHelpers";
+import {
+  generateTemplateConfig,
+  generateTemplateValue,
+} from "src/shared/components/ThreeList/templates";
 import { useExtractCssToJsonPost } from "src/shared/queries/post";
 
-import { convertTreeToRequest } from "./getRequest";
-import { generateTemplateConfig, generateTemplateValue } from "./getTemplate";
-import Tree from "./Three";
+import { convertTreeToRequest } from "./formatRequest";
 
 export interface ITreeNode {
   id: string;
@@ -16,25 +22,26 @@ export interface ITreeNode {
   children?: ITreeNode[];
 }
 
-const initialTree: ITreeNode[] = [
+const initialData = [
   {
     id: "root",
-    label: "Root",
-    children: [generateTemplateConfig(v4(), generateTemplateValue(v4()))],
+    label: i18n.t(tokens.extractCssToJson.root),
+    children: [generateTemplateConfig(i18n.t, generateTemplateValue(i18n.t))],
   },
 ];
 
 export function ExtractCssToJson() {
-  const [treeData, setTreeData] = useState<ITreeNode[]>(initialTree);
+  const { t, i18n } = useTranslation();
+  const [treeData, setTreeData] = useState<ITreeNode[]>(initialData);
   const [fileCount, setFileCount] = useState<number>(0);
+
+  useEffect(() => {
+    setTreeData((prevTreeData) => updateLabels(prevTreeData, t));
+  }, [i18n.language, t]);
 
   const { mutate } = useExtractCssToJsonPost();
 
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const handleUpload = () => {
-    inputRef.current?.click();
-  };
 
   const handleFileChange = () => {
     if (inputRef.current?.files) {
@@ -47,6 +54,7 @@ export function ExtractCssToJson() {
 
     if (inputRef.current?.files) {
       const threeDataReq = convertTreeToRequest(treeData);
+
       mutate({
         configs: threeDataReq,
         archives: inputRef.current?.files,
@@ -69,25 +77,18 @@ export function ExtractCssToJson() {
           sx={{ width: { xs: "80%", md: "65%", lg: "50%" }, p: 3 }}
         >
           <Grid container gap={2}>
-            <Grid item>
-              <Typography
-                variant="h6"
-                fontWeight={"bold"}
-                fontStyle={"italic"}
-                mb={4}
-              >
-                Extrator de propriedades CSS em Lote
-              </Typography>
-            </Grid>
             <Grid item container>
               <Button
+                id="uploadButton"
                 variant="contained"
                 color="info"
                 startIcon={<UploadIcon />}
-                onClick={handleUpload}
+                onClick={() => inputRef.current?.click()}
                 fullWidth
               >
-                {fileCount > 0 ? `${fileCount} File css` : "Upload Css"}
+                {fileCount > 0
+                  ? `${fileCount} ${t(tokens.phrases.fileCss)}`
+                  : t(tokens.phrases.uploadCss)}
               </Button>
               <input
                 type="file"
@@ -99,16 +100,22 @@ export function ExtractCssToJson() {
               />
             </Grid>
             <Grid item container justifyContent={"center"}>
-              <Tree setTreeData={setTreeData} treeData={treeData} />
+              <ThreeList.Container expandedItems={treeData}>
+                <ThreeList.ThreeNode
+                  treeData={treeData}
+                  setTreeData={setTreeData}
+                />
+              </ThreeList.Container>
             </Grid>
             <Grid item container>
               <Button
+                id="generateButton"
                 type="submit"
                 variant="contained"
                 color="success"
                 fullWidth
               >
-                Generate
+                {t(tokens.words.generate)}
               </Button>
             </Grid>
           </Grid>
