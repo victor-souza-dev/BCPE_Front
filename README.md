@@ -6,7 +6,7 @@
   
 <br />
 
-> USED API: https://github.com/victor-souza-dev/BCPE
+> BACK-END API: https://github.com/victor-souza-dev/BCPE
 
 <br />
 
