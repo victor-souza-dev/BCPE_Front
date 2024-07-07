@@ -1,114 +1,4 @@
-interface IGeneric {
-  [key: string]: string | object;
-}
-
-export interface ITokens {
-  [key: string]: string | IGeneric;
-  languages: {
-    en: string;
-    es: string;
-    ptbr: string;
-    ja: string;
-    de: string;
-    it: string;
-    ru: string;
-  };
-  navbar: {
-    title: string;
-  };
-  extractCssToJson: {
-    root: string;
-    file: string;
-    files: string;
-    submit: string;
-    className: string;
-    config: string;
-    property: string;
-    keyValues: string;
-    values: string;
-    variableName: string;
-  };
-  threeList: {
-    addConfig: string;
-    addValue: string;
-  };
-  exceptions: {
-    notFound: string;
-  };
-  words: {
-    tutorial: string;
-    generate: string;
-    skip: string;
-    close: string;
-    back: string;
-    next: string;
-  };
-  phrases: {
-    fileCss: string;
-    uploadCss: string;
-    finishTour: string;
-  };
-  tours: {
-    body: {
-      title: string;
-      content: string;
-    };
-    switchLanguageButton: {
-      title: string;
-      content: string;
-    };
-    treeView: {
-      title: string;
-      content: string;
-    };
-    config: {
-      title: string;
-      content: string;
-    };
-    className: {
-      title: string;
-      content: string;
-    };
-    values: {
-      title: string;
-      content: string;
-    };
-    keyValues: {
-      title: string;
-      content: string;
-    };
-    property: {
-      title: string;
-      content: string;
-    };
-    variableName: {
-      title: string;
-      content: string;
-    };
-    removeButton: {
-      title: string;
-      content: string;
-    };
-    addValueButton: {
-      title: string;
-      content: string;
-    };
-    addConfigButton: {
-      title: string;
-      content: string;
-    };
-    uploadButton: {
-      title: string;
-      content: string;
-    };
-    generateButton: {
-      title: string;
-      content: string;
-    };
-  };
-}
-
-export const tokens: ITokens = {
+export const tokens = {
   languages: {
     en: "languages.en",
     es: "languages.es",
@@ -147,11 +37,14 @@ export const tokens: ITokens = {
     close: "words.close",
     back: "words.back",
     next: "words.next",
+    search: "words.search",
   },
   phrases: {
     fileCss: "phrases.fileCss",
     uploadCss: "phrases.uploadCss",
     finishTour: "phrases.finishTour",
+    existingConfig: "phrases.existingConfig",
+    translationManager: "phrases.translationManager",
   },
   tours: {
     body: {

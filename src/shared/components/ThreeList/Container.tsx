@@ -11,9 +11,10 @@ export interface ITreeNode {
 interface IProps {
   children: React.ReactNode;
   expandedItems?: ITreeNode[] | undefined;
+  fullWidth?: boolean;
 }
 
-export const Container = ({ children, expandedItems }: IProps) => {
+export const Container = ({ children, expandedItems, fullWidth }: IProps) => {
   return (
     <SimpleTreeView
       id="treeView"
@@ -22,9 +23,9 @@ export const Container = ({ children, expandedItems }: IProps) => {
         overflowX: "hidden",
         minHeight: 270,
         flexGrow: 1,
-        maxWidth: 400,
+        maxWidth: fullWidth ? "100%" : 400,
       }}
-      expandedItems={getAllIds(expandedItems || [])}
+      expandedItems={getAllIds(expandedItems)}
       disableSelection
       disabledItemsFocusable
     >

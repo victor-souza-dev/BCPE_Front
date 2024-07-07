@@ -1,6 +1,6 @@
-import { ITokens } from "../tokens";
+import { tokens } from "../tokens";
 
-export const it: ITokens = {
+export const it: typeof tokens = {
   languages: {
     en: "Inglese",
     es: "Spagnolo",
@@ -39,11 +39,14 @@ export const it: ITokens = {
     back: "Indietro",
     close: "Chiudi",
     next: "Avanti",
+    search: "Cerca",
   },
   phrases: {
     fileCss: "File CSS",
     uploadCss: "Carica CSS",
     finishTour: "Termina Tour",
+    existingConfig: "Configurazione Esistente",
+    translationManager: "Gestore delle Traduzioni",
   },
   tours: {
     body: {

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import i18n from "src/locales/i18n";
 import { tokens } from "src/locales/tokens";
+import { Navbar } from "src/shared/components/Navbar";
 import { ThreeList } from "src/shared/components/ThreeList";
 import { updateLabels } from "src/shared/components/ThreeList/mutationsHelpers";
 import {
@@ -63,64 +64,67 @@ export function ExtractCssToJson() {
   };
 
   return (
-    <form style={{ width: "100%" }} onSubmit={onSubmit}>
-      <Grid
-        container
-        pb={2}
-        pt={6}
-        flexDirection={"column"}
-        alignItems={"center"}
-        justifyContent={"center"}
-      >
-        <Paper
-          variant="outlined"
-          sx={{ width: { xs: "80%", md: "65%", lg: "50%" }, p: 3 }}
+    <>
+      <Navbar />
+      <form style={{ width: "100%" }} onSubmit={onSubmit}>
+        <Grid
+          container
+          pb={2}
+          pt={6}
+          flexDirection={"column"}
+          alignItems={"center"}
+          justifyContent={"center"}
         >
-          <Grid container gap={2}>
-            <Grid item container>
-              <Button
-                id="uploadButton"
-                variant="contained"
-                color="info"
-                startIcon={<UploadIcon />}
-                onClick={() => inputRef.current?.click()}
-                fullWidth
-              >
-                {fileCount > 0
-                  ? `${fileCount} ${t(tokens.phrases.fileCss)}`
-                  : t(tokens.phrases.uploadCss)}
-              </Button>
-              <input
-                type="file"
-                ref={inputRef}
-                onChange={handleFileChange}
-                accept=".css"
-                multiple
-                hidden
-              />
-            </Grid>
-            <Grid item container justifyContent={"center"}>
-              <ThreeList.Container expandedItems={treeData}>
-                <ThreeList.ThreeNode
-                  treeData={treeData}
-                  setTreeData={setTreeData}
+          <Paper
+            variant="outlined"
+            sx={{ width: { xs: "80%", md: "65%", lg: "50%" }, p: 3 }}
+          >
+            <Grid container gap={2}>
+              <Grid item container>
+                <Button
+                  id="uploadButton"
+                  variant="contained"
+                  color="info"
+                  startIcon={<UploadIcon />}
+                  onClick={() => inputRef.current?.click()}
+                  fullWidth
+                >
+                  {fileCount > 0
+                    ? `${fileCount} ${t(tokens.phrases.fileCss)}`
+                    : t(tokens.phrases.uploadCss)}
+                </Button>
+                <input
+                  type="file"
+                  ref={inputRef}
+                  onChange={handleFileChange}
+                  accept=".css"
+                  multiple
+                  hidden
                 />
-              </ThreeList.Container>
+              </Grid>
+              <Grid item container justifyContent={"center"}>
+                <ThreeList.Container expandedItems={treeData}>
+                  <ThreeList.ThreeNode
+                    treeData={treeData}
+                    setTreeData={setTreeData}
+                  />
+                </ThreeList.Container>
+              </Grid>
+              <Grid item container>
+                <Button
+                  id="generateButton"
+                  type="submit"
+                  variant="contained"
+                  color="success"
+                  fullWidth
+                >
+                  {t(tokens.words.generate)}
+                </Button>
+              </Grid>
             </Grid>
-            <Grid item container>
-              <Button
-                id="generateButton"
-                type="submit"
-                variant="contained"
-                color="success"
-                fullWidth
-              >
-                {t(tokens.words.generate)}
-              </Button>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Grid>
-    </form>
+          </Paper>
+        </Grid>
+      </form>
+    </>
   );
 }

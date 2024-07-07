@@ -8,7 +8,11 @@ import {
   generateTemplateValue,
 } from "./templates";
 
-export const getAllIds = (nodes: ITreeNode[]): string[] => {
+export const getAllIds = (
+  nodes: ITreeNode[] | undefined,
+): string[] | undefined => {
+  if (!nodes) return undefined;
+
   const ids: string[] = [];
 
   const traverseNodes = (nodes: ITreeNode[]) => {

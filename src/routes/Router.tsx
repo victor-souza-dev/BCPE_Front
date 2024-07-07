@@ -1,12 +1,13 @@
 import {
-    createBrowserRouter,
-    RouteObject,
-    RouterProvider
+  createBrowserRouter,
+  RouteObject,
+  RouterProvider,
 } from "react-router-dom";
 
 import { NotFound } from "src/pages/Exceptions/NotFound";
-
 import { ExtractCssToJson } from "src/pages/ExtractCssToJson/Index";
+import { Translate } from "src/pages/Translate";
+
 import App from "../App";
 
 const router: RouteObject[] = [
@@ -17,6 +18,10 @@ const router: RouteObject[] = [
       {
         index: true,
         element: <ExtractCssToJson />,
+      },
+      {
+        path: "translates",
+        element: <Translate />,
       },
     ],
   },

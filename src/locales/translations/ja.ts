@@ -1,6 +1,6 @@
-import { ITokens } from "../tokens";
+import { tokens } from "../tokens";
 
-export const ja: ITokens = {
+export const ja: typeof tokens = {
   languages: {
     en: "英語",
     es: "スペイン語",
@@ -39,11 +39,14 @@ export const ja: ITokens = {
     back: "戻る",
     close: "閉じる",
     next: "次へ",
+    search: "検索",
   },
   phrases: {
     fileCss: "CSSファイル",
     uploadCss: "CSSをアップロード",
     finishTour: "ツアーを終了",
+    existingConfig: "既存の設定",
+    translationManager: "翻訳マネージャー",
   },
   tours: {
     body: {
