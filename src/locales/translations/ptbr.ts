@@ -120,4 +120,30 @@ export const ptbr: typeof tokens = {
         "Use este botão para enviar um arquivo CSS. O conteúdo do arquivo será analisado e as propriedades CSS serão extraídas de acordo com as configurações definidas.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "Pelo menos uma configuração deve ser fornecida.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "Pelo menos uma chave-valor deve ser fornecida.",
+    "ClassNamecannotbelongerthan100characters.":
+      "O nome da classe não pode ter mais de 100 caracteres.",
+    "ClassNameisrequired.": "O nome da classe é obrigatório.",
+    "ClassNamemustbeatleast1characterlong.":
+      "O nome da classe deve ter pelo menos 1 caractere.",
+    "Configsisrequired.": "As configurações são obrigatórias.",
+    "KeyValuelistisrequired.": "A lista de chave-valor é obrigatória.",
+    "Propertycannotbelongerthan50characters.":
+      "A propriedade não pode ter mais de 50 caracteres.",
+    "Propertyisrequired.": "A propriedade é obrigatória.",
+    "Propertymustbeatleast1characterlong.":
+      "A propriedade deve ter pelo menos 1 caractere.",
+    "ResultNamecannotbelongerthan50characters.":
+      "O nome do resultado não pode ter mais de 50 caracteres.",
+    "ResultNameisrequired.": "O nome do resultado é obrigatório.",
+    "ResultNamemustbeatleast1characterlong.":
+      "O nome do resultado deve ter pelo menos 1 caractere.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "O número de arquivos deve estar entre 1 e 1000.",
+    "Youmustuploadatleastonefile.": "Você deve enviar pelo menos um arquivo.",
+  },
 };

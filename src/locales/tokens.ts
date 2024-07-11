@@ -104,4 +104,31 @@ export const tokens = {
       content: "tours.generateButton.content",
     },
   },
+  responseErrors: {
+    "Youmustuploadatleastonefile.":
+      "responseErrors.Youmustuploadatleastonefile.",
+    "Configsisrequired.": "responseErrors.Configsisrequired.",
+    "Atleastoneconfigurationmustbeprovided.":
+      "responseErrors.Atleastoneconfigurationmustbeprovided.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "responseErrors.Thenumberoffilesmustbebetween1and1000.",
+    "ClassNameisrequired.": "responseErrors.ClassNameisrequired.",
+    "ClassNamemustbeatleast1characterlong.":
+      "responseErrors.ClassNamemustbeatleast1characterlong.",
+    "ClassNamecannotbelongerthan100characters.":
+      "responseErrors.ClassNamecannotbelongerthan100characters.",
+    "KeyValuelistisrequired.": "responseErrors.KeyValuelistisrequired.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "responseErrors.AtleastoneKeyValuemustbeprovided.",
+    "Propertyisrequired.": "responseErrors.Propertyisrequired.",
+    "Propertymustbeatleast1characterlong.":
+      "responseErrors.Propertymustbeatleast1characterlong.",
+    "Propertycannotbelongerthan50characters.":
+      "responseErrors.Propertycannotbelongerthan50characters.",
+    "ResultNameisrequired.": "responseErrors.ResultNameisrequired.",
+    "ResultNamemustbeatleast1characterlong.":
+      "responseErrors.ResultNamemustbeatleast1characterlong.",
+    "ResultNamecannotbelongerthan50characters.":
+      "responseErrors.ResultNamecannotbelongerthan50characters.",
+  },
 };

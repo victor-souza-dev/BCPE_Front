@@ -65,9 +65,6 @@ export const useExtractCssToJsonPost = () => {
         enqueueSnackbar("Erro inesperado", { variant: "error" });
       }
     },
-    onError: () => {
-      enqueueSnackbar("Erro na solicitação", { variant: "error" });
-    },
   });
 
   return mutation;

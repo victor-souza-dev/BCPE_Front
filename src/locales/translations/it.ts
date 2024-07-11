@@ -120,4 +120,30 @@ export const it: typeof tokens = {
         "Usa questo pulsante per caricare un file CSS. Il contenuto del file verrà analizzato e le proprietà CSS verranno estratte in base alle configurazioni definite.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "Deve essere fornita almeno una configurazione.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "Deve essere fornito almeno un KeyValue.",
+    "ClassNamecannotbelongerthan100characters.":
+      "Il nome della classe non può essere più lungo di 100 caratteri.",
+    "ClassNameisrequired.": "Il nome della classe è obbligatorio.",
+    "ClassNamemustbeatleast1characterlong.":
+      "Il nome della classe deve essere lungo almeno 1 carattere.",
+    "Configsisrequired.": "Le configurazioni sono obbligatorie.",
+    "KeyValuelistisrequired.": "La lista di KeyValue è obbligatoria.",
+    "Propertycannotbelongerthan50characters.":
+      "La proprietà non può essere più lunga di 50 caratteri.",
+    "Propertyisrequired.": "La proprietà è obbligatoria.",
+    "Propertymustbeatleast1characterlong.":
+      "La proprietà deve essere lunga almeno 1 carattere.",
+    "ResultNamecannotbelongerthan50characters.":
+      "Il nome del risultato non può essere più lungo di 50 caratteri.",
+    "ResultNameisrequired.": "Il nome del risultato è obbligatorio.",
+    "ResultNamemustbeatleast1characterlong.":
+      "Il nome del risultato deve essere lungo almeno 1 carattere.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "Il numero di file deve essere compreso tra 1 e 1000.",
+    "Youmustuploadatleastonefile.": "Devi caricare almeno un file.",
+  },
 };

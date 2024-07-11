@@ -119,4 +119,30 @@ export const ru: typeof tokens = {
         "Используйте эту кнопку, чтобы загрузить CSS-файл. Содержимое файла будет проанализировано, и CSS-свойства будут извлечены в соответствии с определенными конфигурациями.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "Необходимо предоставить хотя бы одну конфигурацию.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "Необходимо предоставить хотя бы одну пару ключ-значение.",
+    "ClassNamecannotbelongerthan100characters.":
+      "Имя класса не может быть длиннее 100 символов.",
+    "ClassNameisrequired.": "Имя класса обязательно.",
+    "ClassNamemustbeatleast1characterlong.":
+      "Имя класса должно содержать как минимум 1 символ.",
+    "Configsisrequired.": "Требуются конфигурации.",
+    "KeyValuelistisrequired.": "Требуется список ключ-значение.",
+    "Propertycannotbelongerthan50characters.":
+      "Свойство не может быть длиннее 50 символов.",
+    "Propertyisrequired.": "Свойство обязательно.",
+    "Propertymustbeatleast1characterlong.":
+      "Свойство должно содержать как минимум 1 символ.",
+    "ResultNamecannotbelongerthan50characters.":
+      "Имя результата не может быть длиннее 50 символов.",
+    "ResultNameisrequired.": "Требуется имя результата.",
+    "ResultNamemustbeatleast1characterlong.":
+      "Имя результата должно содержать как минимум 1 символ.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "Количество файлов должно быть от 1 до 1000.",
+    "Youmustuploadatleastonefile.": "Вы должны загрузить хотя бы один файл.",
+  },
 };

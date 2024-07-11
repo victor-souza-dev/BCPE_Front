@@ -120,4 +120,31 @@ export const ja: typeof tokens = {
         "このボタンを使用してCSSファイルをアップロードします。ファイルの内容が解析され、定義された設定に従ってCSSプロパティが抽出されます。",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "少なくとも1つの設定を指定する必要があります。",
+    "AtleastoneKeyValuemustbeprovided.":
+      "少なくとも1つのキーと値を指定する必要があります。",
+    "ClassNamecannotbelongerthan100characters.":
+      "クラス名は100文字を超えることはできません。",
+    "ClassNameisrequired.": "クラス名が必要です。",
+    "ClassNamemustbeatleast1characterlong.":
+      "クラス名は少なくとも1文字である必要があります。",
+    "Configsisrequired.": "設定が必要です。",
+    "KeyValuelistisrequired.": "キーと値のリストが必要です。",
+    "Propertycannotbelongerthan50characters.":
+      "プロパティは50文字を超えることはできません。",
+    "Propertyisrequired.": "プロパティが必要です。",
+    "Propertymustbeatleast1characterlong.":
+      "プロパティは少なくとも1文字である必要があります。",
+    "ResultNamecannotbelongerthan50characters.":
+      "結果名は50文字を超えることはできません。",
+    "ResultNameisrequired.": "結果名が必要です。",
+    "ResultNamemustbeatleast1characterlong.":
+      "結果名は少なくとも1文字である必要があります。",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "ファイルの数は1から1000の間である必要があります。",
+    "Youmustuploadatleastonefile.":
+      "少なくとも1つのファイルをアップロードする必要があります。",
+  },
 };

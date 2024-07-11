@@ -120,4 +120,30 @@ export const es: typeof tokens = {
         "Utilice este botón para subir un archivo CSS. El contenido del archivo será analizado y las propiedades CSS se extraerán de acuerdo con las configuraciones definidas.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "Al menos una configuración debe ser proporcionada.",
+    "Configsisrequired.": "Se requieren configuraciones.",
+    "Youmustuploadatleastonefile.": "Debe subir al menos un archivo.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "Al menos un par clave-valor debe ser proporcionado.",
+    "ClassNamecannotbelongerthan100characters.":
+      "El nombre de la clase no puede tener más de 100 caracteres.",
+    "ClassNameisrequired.": "Se requiere el nombre de la clase.",
+    "ClassNamemustbeatleast1characterlong.":
+      "El nombre de la clase debe tener al menos 1 carácter.",
+    "KeyValuelistisrequired.": "Se requiere la lista de pares clave-valor.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "El número de archivos debe estar entre 1 y 1000.",
+    "Propertycannotbelongerthan50characters.":
+      "La propiedad no puede tener más de 50 caracteres.",
+    "Propertymustbeatleast1characterlong.":
+      "La propiedad debe tener al menos 1 carácter.",
+    "Propertyisrequired.": "Se requiere la propiedad.",
+    "ResultNamecannotbelongerthan50characters.":
+      "El nombre del resultado no puede tener más de 50 caracteres.",
+    "ResultNamemustbeatleast1characterlong.":
+      "El nombre del resultado debe tener al menos 1 carácter.",
+    "ResultNameisrequired.": "Se requiere el nombre del resultado.",
+  },
 };

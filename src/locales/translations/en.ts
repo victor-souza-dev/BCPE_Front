@@ -119,4 +119,30 @@ export const en: typeof tokens = {
         "Use this button to upload a CSS file. The file content will be analyzed and the CSS properties will be extracted according to the defined configurations.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "At least one configuration must be provided.",
+    "Configsisrequired.": "Configs is required.",
+    "Youmustuploadatleastonefile.": "You must upload at least one file.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "At least one Key Value must be provided.",
+    "KeyValuelistisrequired.": "Key Value list is required.",
+    "ClassNamecannotbelongerthan100characters.":
+      "Class Name cannot be longer than 100 characters.",
+    "ClassNamemustbeatleast1characterlong.":
+      "Class Name must be at least 1 character long.",
+    "ClassNameisrequired.": "Class Name is required.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "The number of files must be between 1 and 1000.",
+    "Propertycannotbelongerthan50characters.":
+      "Property cannot be longer than 50 characters.",
+    "Propertymustbeatleast1characterlong.":
+      "Property must be at least 1 character long.",
+    "Propertyisrequired.": "Property is required.",
+    "ResultNamecannotbelongerthan50characters.":
+      "Result Name cannot be longer than 50 characters.",
+    "ResultNamemustbeatleast1characterlong.":
+      "Result Name must be at least 1 character long.",
+    "ResultNameisrequired.": "Result Name is required.",
+  },
 };

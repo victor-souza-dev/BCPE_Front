@@ -120,4 +120,31 @@ export const de: typeof tokens = {
         "Verwenden Sie diese Schaltfläche, um eine CSS-Datei hochzuladen. Der Inhalt der Datei wird analysiert und die CSS-Eigenschaften werden gemäß den definierten Konfigurationen extrahiert.",
     },
   },
+  responseErrors: {
+    "Atleastoneconfigurationmustbeprovided.":
+      "Mindestens eine Konfiguration muss angegeben werden.",
+    "AtleastoneKeyValuemustbeprovided.":
+      "Mindestens ein Schlüsselwert muss angegeben werden.",
+    "ClassNamecannotbelongerthan100characters.":
+      "Der Klassenname darf nicht länger als 100 Zeichen sein.",
+    "ClassNamemustbeatleast1characterlong.":
+      "Der Klassenname muss mindestens 1 Zeichen lang sein.",
+    "ClassNameisrequired.": "Der Klassenname ist erforderlich.",
+    "Configsisrequired.": "Konfigurationen sind erforderlich.",
+    "Youmustuploadatleastonefile.":
+      "Sie müssen mindestens eine Datei hochladen.",
+    "KeyValuelistisrequired.": "Die Liste der Schlüsselwerte ist erforderlich.",
+    "Thenumberoffilesmustbebetween1and1000.":
+      "Die Anzahl der Dateien muss zwischen 1 und 1000 liegen.",
+    "Propertycannotbelongerthan50characters.":
+      "Eigenschaft darf nicht länger als 50 Zeichen sein.",
+    "Propertymustbeatleast1characterlong.":
+      "Eigenschaft muss mindestens 1 Zeichen lang sein.",
+    "Propertyisrequired.": "Eigenschaft ist erforderlich.",
+    "ResultNamecannotbelongerthan50characters.":
+      "Der Ergebnisname darf nicht länger als 50 Zeichen sein.",
+    "ResultNamemustbeatleast1characterlong.":
+      "Der Ergebnisname muss mindestens 1 Zeichen lang sein.",
+    "ResultNameisrequired.": "Der Ergebnisname ist erforderlich.",
+  },
 };
